@@ -1,6 +1,6 @@
 class PasswordGenerator{
     private String prefix;
-    private int count = 0;
+    private static int count = 0;
     private int randN;
     private int passN = 0;
     public PasswordGenerator(int n, String pre){
@@ -26,8 +26,11 @@ class PasswordGenerator{
     }
     public static void main(String[]args){
         PasswordGenerator uno = new PasswordGenerator(5, "elfa");
+        PasswordGenerator dos = new PasswordGenerator(3);
         System.out.println(uno.pwGen());
         System.out.println(uno.pwCount());
+        System.out.println(dos.pwGen());
+        System.out.println(dos.pwCount());
 
     }
 }
